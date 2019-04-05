@@ -33,7 +33,8 @@ import { PostProductDialogComponent } from './post-product-dialog/post-product-d
   providers: [DataService, AuthService],
   bootstrap: [AppComponent],
   entryComponents: [
-    PostDialogComponent
+    PostDialogComponent,
+    PostProductDialogComponent
   ]
 })
 export class AppModule {}
