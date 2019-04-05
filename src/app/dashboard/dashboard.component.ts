@@ -21,7 +21,7 @@ export class DashboardComponent {
 
   deletePost(id) {
     if (this.auth.isAuthenticated()) {
-      this.dataService.deletePost(id);
+      this.dataService.deleteProductPost(id);
       this.dataSource = new PostDataSource(this.dataService);
     } else {
       alert('Login in Before');
@@ -34,7 +34,7 @@ export class DashboardComponent {
       data: 'Add Post'
     });
     dialogRef.componentInstance.event.subscribe((result) => {
-      this.dataService.addPost(result.data);
+      this.dataService.addProductPost(result.data);
       this.dataSource = new PostDataSource(this.dataService);
     });
   }
