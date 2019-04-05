@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>{{data}}</h1>
+<div mat-dialog-content>
+  <form class="example-form" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput placeholder="Product Title" type="text" required [(ngModel)]="productPost.title" name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Product Description" required [(ngModel)]="productPost.description" name="description"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select matInput placeholder="Post Category" required [(ngModel)]="productPost.product_category" name="category">
+        <mat-option *ngFor="let cat of categories" [value]="cat.value">
+          {{ cat.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Product Seller" required [(ngModel)]="productPost.Seller" name="Seller"></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Product Quantity" required [(ngModel)]="productPost.Quantity" name="Quantity"></textarea>
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="primary">Save</button>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button class="close" (click)="onNoClick()" color="warn">Cancel</button>
+</div>

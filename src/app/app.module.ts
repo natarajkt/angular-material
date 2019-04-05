@@ -12,13 +12,15 @@ import {DataService} from './data/data.service';
 import {AuthService} from './auth.service';
 import {PostDialogComponent} from './post-dialog/post-dialog.component';
 import {FormsModule} from '@angular/forms';
+import { PostProductDialogComponent } from './post-product-dialog/post-product-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     DashboardComponent,
-    PostDialogComponent
+    PostDialogComponent,
+    PostProductDialogComponent
   ],
   imports: [
     BrowserModule,

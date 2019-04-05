@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {DataService} from '../data/data.service';
-import {Post} from '../Post';
+import {Product} from '../Product';
 import {DataSource} from '@angular/cdk/table';
 import {Observable} from 'rxjs/Observable';
 import {AuthService} from '../auth.service';
-import {PostDialogComponent} from '../post-dialog/post-dialog.component';
+import {PostProductDialogComponent} from '../post-product-dialog/post-product-dialog.component';
 import {MatDialog} from '@angular/material';
 
 @Component({
@@ -16,7 +16,7 @@ export class DashboardComponent {
   constructor(public auth: AuthService, public dialog: MatDialog, private dataService: DataService) {
   }
 
-  displayedColumns = ['date_posted', 'title', 'category', 'delete'];
+  displayedColumns = ['date_purchased', 'title', 'category', 'delete'];
   dataSource = new PostDataSource(this.dataService);
 
   deletePost(id) {
@@ -29,7 +29,7 @@ export class DashboardComponent {
   }
 
   openDialog(): void {
-    let dialogRef = this.dialog.open(PostDialogComponent, {
+    let dialogRef = this.dialog.open(PostProductDialogComponent, {
       width: '600px',
       data: 'Add Post'
     });
@@ -45,8 +45,8 @@ export class PostDataSource extends DataSource<any> {
     super();
   }
 
-  connect(): Observable<Post[]> {
-    return this.dataService.getData();
+  connect(): Observable<Product[]> {
+    return this.dataService.getProductData();
   }
 
   disconnect() {
