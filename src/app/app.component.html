@@ -58,6 +58,14 @@
           </li>
           <li>
             <a
+              *ngIf="!auth.isAuthenticated()"
+              routerLink="/register">
+              <mat-icon class="icon">Register</mat-icon>
+              <span class="label">Register</span>
+            </a>
+          </li>
+          <li>
+            <a
               routerLink="/dashboard">
               <mat-icon class="icon">dashboard</mat-icon>
               <span class="label">Dashboard</span>

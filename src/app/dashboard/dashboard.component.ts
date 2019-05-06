@@ -29,7 +29,7 @@ export class DashboardComponent {
   }
 
   openDialog(): void {
-    let dialogRef = this.dialog.open(PostProductDialogComponent, {
+    const dialogRef = this.dialog.open(PostProductDialogComponent, {
       width: '600px',
       data: 'Add Post'
     });

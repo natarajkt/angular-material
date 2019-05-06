@@ -13,6 +13,7 @@ import {AuthService} from './auth.service';
 import {PostDialogComponent} from './post-dialog/post-dialog.component';
 import {FormsModule} from '@angular/forms';
 import { PostProductDialogComponent } from './post-product-dialog/post-product-dialog.component';
+import { UserRegistrationComponent } from './user-registration/user-registration.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { PostProductDialogComponent } from './post-product-dialog/post-product-d
     WelcomeComponent,
     DashboardComponent,
     PostDialogComponent,
-    PostProductDialogComponent
+    PostProductDialogComponent,
+    UserRegistrationComponent
   ],
   imports: [
     BrowserModule,
